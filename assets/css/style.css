@@ -1,3 +1,4 @@
-#name, #email, #phone {
-    margin-bottom: 10px;
-}
+
+/* region index */
+    .form-control__custom { margin-bottom: 10px }
+/* endregion index */

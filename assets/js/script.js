@@ -1,26 +1,27 @@
-$(document).ready(function(){
-  $('#sendMail').submit(function(e){
-    e.preventDefault();
-    var form = $(this).serializeArray();
+$(document).ready(function () {
+	$('#ajaxForm').submit(function (e) {
+		e.preventDefault();
+		var form = $(this).serializeArray();
 
-    // Send E-mail
-    $.ajax({
-      method: "POST",
-      url: "../../mail.php",
-      data: form,
-      dataType: "json"
-    }).done(function(e){
-      $('#msg').html(e.msg);
-      $('.alert').removeClass('fade').addClass('alert-danger');
+		$.ajax({
+			method: "POST",
+			url: "../../controller.php",
+			data: form,
+			dataType: "json"
+		}).done( function (response) {
+			console.log(response);
 
-      if(e.status){
-        $('#sendMail').each(function(){
-          $('.alert').removeClass('alert-danger').addClass('alert-success');
-          this.reset();
-        });
-      }
-    });
+			// $('#msg').html(e.msg);
+			// $('.alert').removeClass('fade').addClass('alert-danger');
 
-    return false;
-  });
+			// if (e.status) {
+			// 	$('#sendMail').each(function () {
+			// 		$('.alert').removeClass('alert-danger').addClass('alert-success');
+			// 		this.reset();
+			// 	});
+			// }
+		});
+
+		return false;
+	});
 });
