@@ -11,15 +11,15 @@ $(document).ready(function () {
 		}).done( function (response) {
 			console.log(response);
 
-			// $('#msg').html(e.msg);
-			// $('.alert').removeClass('fade').addClass('alert-danger');
+			$('#msg').html(response.msg);
+			$('.alert').removeClass('fade').addClass('alert-danger');
 
-			// if (e.status) {
-			// 	$('#sendMail').each(function () {
-			// 		$('.alert').removeClass('alert-danger').addClass('alert-success');
-			// 		this.reset();
-			// 	});
-			// }
+			if (response.status) {
+				$('#sendMail').each(function () {
+					$('.alert').removeClass('alert-danger').addClass('alert-success');
+					this.reset();
+				});
+			}
 		});
 
 		return false;

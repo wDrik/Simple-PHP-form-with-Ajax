@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Backup - PHP</title>
+    <title>Simple PHP form</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 <body>
+    <main>
+        <!-- Form -->
+        <section class="form-wrapper">
+            <h3>Contact Form</h3>
+            <form id="ajaxForm" class="form-group">
+                <input class="form-control form-control__custom" type="text" name="name" placeholder="Name">
+                <input class="form-control form-control__custom" type="email" name="email" placeholder="E-mail">
+                <input class="form-control form-control__custom" type="phone" name="phone" placeholder="Phone">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </form>
+            <div id="msg" class="alert alert-danger alert-dismissible fade show" role="alert"></div>
+        </section>
+        <!-- /Form --> 
+    </main>
 
-    <form id="ajaxForm" class="form-group">
-        <input class="form-control form-control__custom" type="text" name="name" placeholder="Name">
-        <input class="form-control form-control__custom" type="email" name="email" placeholder="E-mail">
-        <input class="form-control form-control__custom" type="phone" name="phone" placeholder="Phone">
-        <input class="btn btn-primary" type="submit" value="Submit">
-    </form>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
